@@ -7,6 +7,7 @@ QuestionText = Annotated[str, StringConstraints(strip_whitespace=True, min_lengt
 
 class QuestionBase(BaseModel):
     text: QuestionText
+    category_id: Annotated[int, Field(gt=0)]
 
 
 class QuestionCreate(QuestionBase):

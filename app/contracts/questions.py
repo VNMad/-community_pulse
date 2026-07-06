@@ -11,10 +11,11 @@ class QuestionUpdateRequest(QuestionUpdate):
     pass
 
 class QuestionResponse(QuestionRead):
-    pass
+    category: CategoryRead
 
 
 class QuestionDetailResponse(QuestionRead):
+    category: CategoryRead
     statistics: StatisticsRead | None = None
 
 
